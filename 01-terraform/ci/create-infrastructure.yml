@@ -31,7 +31,7 @@ steps:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/01-terraform'
-    backendServiceArm: 'Visual Studio Enterprise – MPN(b264c09a-1b68-4202-8469-736ce800d110)'
+    backendServiceArm: 'Visual Studio Enterprise – MPN(a6982377-eb4e-472c-bf48-537ceed20103)'
     backendAzureRmResourceGroupName: '$(TerraformStorageRG)'
     backendAzureRmStorageAccountName: '$(TerraformStorageAccount)'
     backendAzureRmContainerName: 'terraform'
@@ -42,11 +42,11 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)/01-terraform'
-    environmentServiceNameAzureRM: 'Visual Studio Enterprise – MPN(b264c09a-1b68-4202-8469-736ce800d110)'
+    environmentServiceNameAzureRM: 'Visual Studio Enterprise – MPN(a6982377-eb4e-472c-bf48-537ceed20103)'
     
 - task: TerraformTaskV1@0
   inputs:
     provider: 'azurerm'
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/01-terraform'
-    environmentServiceNameAzureRM: 'Visual Studio Enterprise – MPN(b264c09a-1b68-4202-8469-736ce800d110)'
+    environmentServiceNameAzureRM: 'Visual Studio Enterprise – MPN(a6982377-eb4e-472c-bf48-537ceed20103)'
