@@ -15,24 +15,23 @@ steps:
     terraformVersion: '0.13.1'
 
    
-#- task: TerraformTaskV1@0
-#  inputs:
-#    provider: 'azurerm'
-#    command: 'init'
-#    workingDirectory: '$(System.DefaultWorkingDirectory)/01-terraform'
-#    backendServiceArm: 'Visual Studio Enterprise – MPN(b264c09a-1b68-4202-8469-736ce800d110)'
-#    backendAzureRmResourceGroupName: '$(TerraformStorageRG)'
-#    backendAzureRmStorageAccountName: '$(TerraformStorageAccount)'
-#    backendAzureRmContainerName: 'terraform'
-#    backendAzureRmKey: 'prod.terraform.tfstate'
-
-   
-#- task: TerraformTaskV1@0
-#  inputs:
-#    provider: 'azurerm'
-#    command: 'destroy'
-#    workingDirectory: '$(System.DefaultWorkingDirectory)/01-terraform'
-#    environmentServiceNameAzureRM: 'Visual Studio Enterprise – MPN(b264c09a-1b68-4202-8469-736ce800d110)'
+- task: TerraformTaskV1@0
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/01-terraform'
+    backendServiceArm: 'Visual Studio Enterprise – MPN(b264c09a-1b68-4202-8469-736ce800d110)'
+    backendAzureRmResourceGroupName: '$(TerraformStorageRG)'
+    backendAzureRmStorageAccountName: '$(TerraformStorageAccount)'
+    backendAzureRmContainerName: 'terraform'
+    backendAzureRmKey: 'prod.terraform.tfstate'
+  
+- task: TerraformTaskV1@0
+  inputs:
+    provider: 'azurerm'
+    command: 'destroy'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/01-terraform'
+    environmentServiceNameAzureRM: 'Visual Studio Enterprise – MPN(b264c09a-1b68-4202-8469-736ce800d110)'
 
 - task: AzureCLI@2
   inputs:
