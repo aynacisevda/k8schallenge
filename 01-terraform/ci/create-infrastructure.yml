@@ -22,7 +22,7 @@ steps:
     inlineScript: |
       call az group create --location $(location) --name $(TerraformStorageRG)
               
-      call az storage account create --name $(TerraformStorageAccount) --resource-group $(TerraformStorageRG) --location '$(location)' --sku Standard_LRS
+      call az storage account create --name $(TerraformStorageAccount) --resource-group $(TerraformStorageRG) --location $(location) --sku Standard_LRS
               
       call az storage container create --name terraform --account-name $(TerraformStorageAccount)
     
