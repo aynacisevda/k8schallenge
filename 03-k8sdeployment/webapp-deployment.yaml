@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: samplewebapp
-        image: fthkucuk/k8schallenge:latest
+        image: fthkucuk/k8schallenge
         imagePullPolicy: "Always"
         ports:
         - containerPort: 11130
