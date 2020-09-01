@@ -17,6 +17,7 @@ steps:
     azureResourceGroup: 'sample-rg'
     kubernetesCluster: 'sample-aks'
     command: 'apply'
+    arguments: '-f webapp-deployment.yaml'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
     workingDirectory: '$(System.DefaultWorkingDirectory)/03-k8sdeployment'
