@@ -40,10 +40,6 @@ spec:
   type: LoadBalancer
   sessionAffinity: None
   externalTrafficPolicy: Cluster
-  status:
-  loadBalancer:
-    ingress:
-      - ip: 23.97.181.0
 ---  
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
