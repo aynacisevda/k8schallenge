@@ -16,7 +16,7 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'Visual Studio Enterprise – MPN(b264c09a-1b68-4202-8469-736ce800d110)'
+    azureSubscription: 'Visual Studio Enterprise – MPN(a6982377-eb4e-472c-bf48-537ceed20103)'
     scriptType: 'batch'
     scriptLocation: 'inlineScript'
     inlineScript: |
