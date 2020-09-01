@@ -16,3 +16,7 @@ steps:
     repository: 'fthkucuk/k8schallenge'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+      latest
+    addPipelineData: false
