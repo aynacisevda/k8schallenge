@@ -40,4 +40,4 @@ steps:
     scriptType: 'batch'
     scriptLocation: 'inlineScript'
     inlineScript: |
-      call az group delete --name $(TerraformStorageRG)
+      call az group delete --name $(TerraformStorageRG) -y
